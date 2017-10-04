@@ -35,12 +35,13 @@ export class Tr extends React.Component {
         }
 
         // Manually transfer props
-        var props = filterPropsFrom(this.props);
 
-        return React.DOM.tr(props, children);
+        return <tr {...this.props}>
+            {children}
+        </tr>
+
     }
 };
 
 Tr.childNode = Td;
 Tr.dataType = 'object';
-
